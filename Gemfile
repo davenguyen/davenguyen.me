@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
 gem 'coffee-rails', '~> 4.2'
+gem 'font-awesome-rails', '~> 4.6'
+gem 'haml-rails', '~> 0.9'
 gem 'jquery-rails'
 gem 'puma', '~> 3.0'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-gem 'haml-rails', '~> 0.9'
 gem 'sass-rails', '~> 5.0'
 gem 'sqlite3'
 gem 'turbolinks', '~> 5'
