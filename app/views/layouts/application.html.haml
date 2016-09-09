@@ -21,31 +21,21 @@
     #wrap
       #header
         .row.cv-section
-          .span9
-            .cv-section-title
+          .span12
+            .cv-section-title.text-center
               %h1
                 Dave Nguyen
                 %small Ruby on Rails Developer
-          .span3
-            .cv-item
-              .social-media.fixed
-                %a.facebook-icon.social-icon{:href => "#"}
-                  %i.fa.fa-facebook
-                %a.twitter-icon.social-icon{:href => "#"}
-                  %i.fa.fa-twitter
-                %a.googleplus-icon.social-icon{:href => "#"}
-                  %i.fa.fa-google-plus
-                %a.linkedin-icon.social-icon{:href => "#"}
-                  %i.fa.fa-linkedin
-              %p.last
-                %span.hidden-tablet Email:
-                %a{:href => "mailto:dave@davenguyen.me"} dave@davenguyen.me
-                %br/
-                = succeed "(123)" do
-                  %span.hidden-tablet Phone:
-                %br/
-                %span.hidden-tablet Web:
-                %a{:href => "#"} davenguyen.me
+
+              .social-media.text-center
+                = mail_to 'dave@davenguyen.me' do
+                  = fa_stacked_icon 'envelope inverse', base: 'square', class: 'fa-2x'
+                = link_to 'https://github.com/davenguyen?tab=repositories', target: '_blank' do
+                  = fa_stacked_icon 'github inverse', base: 'square', class: 'fa-2x'
+                = link_to 'https://www.linkedin.com/in/davehn', target: '_blank' do
+                  = fa_stacked_icon 'linkedin inverse', base: 'square', class: 'fa-2x'
+                %span
+                  = fa_stacked_icon 'ra inverse', base: 'square', class: 'fa-2x'
       #content
         .row.cv-section
           .span3
