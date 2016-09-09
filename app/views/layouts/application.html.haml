@@ -41,21 +41,6 @@
       #footer
         .row
           .span12
-            .cv-contact
-              .cv-contact-toggle
-                %a{:href => "#"}
-                  %i.fa.fa-envelope
-              .cv-section-title
-                %h2 Contact Form
-              %p Consectetur adipiscing elit phasellus non nibh a mi placerat imperdiet.
-              %form#contact-form.fixed{:action => "_layout/php/send.php", :method => "post", :name => "contact-form"}
-                %fieldset
-                  #formstatus
-                  %input#name{:name => "name", :placeholder => "name", :type => "text", :value => ""}/
-                  %input#email{:name => "email", :placeholder => "address", :type => "text", :value => ""}/
-                  %input#subject{:name => "subject", :placeholder => "subject", :type => "text", :value => ""}/
-                  %textarea#message{:cols => "25", :name => "message", :placeholder => "message", :rows => "50"}
-                  %input#submit{:name => "submit", :type => "submit", :value => "Send!"}/
             %h4.copyright
     %a#back-to-top{:href => "#"}
       = fa_icon 'angle-up'
