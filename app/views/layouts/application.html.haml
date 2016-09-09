@@ -1,10 +1,172 @@
 !!!
-%html
+%html.no-js
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title DavenguyenMe
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0", :name => "viewport"}/
+    %meta{:content => "IE=edge,chrome=1,requiresActiveX=true", "http-equiv" => "X-UA-Compatible"}/
+
+    %title The home of Dave Nguyen, Ruby on Rails Developer
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+    %meta{:content => "The home of Dave Nguyen, Ruby on Rails developer", :name => "description"}/
+
+    / /// Favicons ////////
+    %link{:href => "apple-touch-icon-144-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "144x144"}/
+    %link{:href => "favicon.png", :rel => "shortcut icon"}/
+
   %body
-    = yield
+    #wrap
+      #header
+        .row.cv-section
+          .span9
+            .cv-section-title
+              %h1
+                Dave Nguyen
+                %small Ruby on Rails Developer
+          .span3
+            .cv-item
+              .social-media.fixed
+                %a.facebook-icon.social-icon{:href => "#"}
+                  %i.fa.fa-facebook
+                %a.twitter-icon.social-icon{:href => "#"}
+                  %i.fa.fa-twitter
+                %a.googleplus-icon.social-icon{:href => "#"}
+                  %i.fa.fa-google-plus
+                %a.linkedin-icon.social-icon{:href => "#"}
+                  %i.fa.fa-linkedin
+              %p.last
+                %span.hidden-tablet Email:
+                %a{:href => "mailto:dave@davenguyen.me"} dave@davenguyen.me
+                %br/
+                = succeed "(123)" do
+                  %span.hidden-tablet Phone:
+                %br/
+                %span.hidden-tablet Web:
+                %a{:href => "#"} davenguyen.me
+      #content
+        .row.cv-section
+          .span3
+            .cv-section-title
+              %h2 Profesional Profile
+          .span9
+            .cv-item
+              %p
+                Laecenas ac diam vel leo fringilla elementum. Quisque mi sapien, vulputate at felis in, rhoncus
+                fringilla sem. Nunc non magna volutpat, bibendum magna ac, laoreet lectus. Vivamus et nibh ac
+                arcu lobortis elementum eget sed mi. Pellentesque auctor ligula a ante tempus interdum. Praesent
+                sed luctus ligula. Nam varius, mauris vitae accumsan pharetra, enim lacus eleifend nibh, in mattis
+                enim magna in arcu.
+              %p.last
+                Donec auctor lacus eu diam congue tempor. Aliquam gravida nec turpis at sagittis. Proin molestie
+                enim non nisi porttitor posuere. Ut blandit justo at sapien iaculis rutrum. Quisque vel diam at mi
+                mattis tincidunt nec id odio.
+        .row.cv-section
+          .span3
+            .cv-section-title
+              %h2 Work Experience
+          .span9
+            .cv-item
+              %p.period July 2008 - Present
+              %h3
+                %strong Senior Project Manager
+              %h4 Web Design Studios, Full-Time
+              %br/
+              %p
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula, magna et bibendum
+                malesuada, purus augue suscipit dolor, vitae fringilla dui nibh non lectus. Curabitur in
+                pellentesque tortor. Nunc posuere vestibulum augue, quis posuere orci blandit vitae. Suspendisse
+                dignissim elit dui, ac dictum felis interdum nec.
+              %ul.fill-circle
+                %li Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                %li Vivamus vitae libero odio, eu interdum elit
+                %li Donec dignissim purus vel leo accumsan interdum
+                %li Proin sit amet massa mi, in volutpat ante
+            .cv-item
+              %p.period April 2007 - May 2008
+              %h3
+                %strong Front End Developer
+              %h4 Acme Advertising, Full-Time
+              %br/
+              %p
+                Curabitur in pellentesque tortor. Nunc posuere vestibulum augue, quis posuere orci blandit
+                vitae. Suspendisse dignissim elit dui, ac dictum felis interdum nec.
+              %ul.fill-circle
+                %li Vivamus vitae libero odio, eu interdum elit
+                %li Donec dignissim purus vel leo accumsan interdum
+                %li Proin sit amet massa mi, in volutpat ante
+        .row.cv-section
+          .span3
+            .cv-section-title
+              %h2 Technical Skills
+          .span9
+            .cv-item
+              %p.period Expert, 4 Years
+              %h3.text-uppercase
+                %strong Html5 &amp; Css3
+              %br.clear/
+              %p.last
+                Vestibulum feugiat gravida est nec ultrices. Pellentesque habitant morbi tristique senectus et netus
+                et malesuada fames ac turpis egestas. Etiam vel velit quam. Donec quis porta libero.
+            .cv-item
+              %p.period Advanced, 2 Years
+              %h3
+                %strong Javascript
+              %br.clear/
+              %p.last
+                Morbi in mi non velit dapibus tincidunt ut vel dolor. Class aptent taciti sociosqu ad litora torquent
+                per conubia nostra, per inceptos himenaeos. Morbi elementum urna vitae justo vehicula, in lacinia magna
+                ornare. Aenean porttitor, quam quis fermentum consequat.
+            .cv-item
+              %p.period Beginer, 1 Year
+              %h3
+                %strong jQuerry
+              %br.clear/
+              %p
+                Nunc imperdiet placerat diam et aliquet. Suspendisse massa neque, rhoncus eget posuere ac, aliquet ut
+                mi. Etiam rhoncus placerat lorem eu posuere.
+              %p.last
+                Nunc dignissim commodo urna, eget bibendum nisl vehicula nec. Mauris faucibus erat elit, nec malesuada
+                augue varius sit amet. Morbi sit amet scelerisque risus. Duis vulputate, dolor ut mattis aliquam, massa diam
+                imperdiet ante, vel viverra tortor risus sit amet eros.
+        .row.cv-section
+          .span3
+            .cv-section-title
+              %h2 Education
+          .span9
+            .cv-item
+              %h3
+                %strong Boston State Univerity
+              %h4 Dual Major, Web Design and English - 3.9 GPA
+              %br/
+              %p.last
+                Morbi in mi non velit dapibus tincidunt ut vel dolor. Class aptent taciti sociosqu ad litora torquent
+                per conubia nostra, per inceptos himenaeos. Morbi elementum urna vitae justo vehicula, in lacinia magna ornare.
+                Aenean porttitor, quam quis fermentum consequat, eros lorem imperdiet lorem,.
+      #footer
+        .row
+          .span12
+            .cv-contact
+              .cv-contact-toggle
+                %a{:href => "#"}
+                  %i.fa.fa-envelope
+              .cv-section-title
+                %h2 Contact Form
+              %p Consectetur adipiscing elit phasellus non nibh a mi placerat imperdiet.
+              %form#contact-form.fixed{:action => "_layout/php/send.php", :method => "post", :name => "contact-form"}
+                %fieldset
+                  #formstatus
+                  %input#name{:name => "name", :placeholder => "name", :type => "text", :value => ""}/
+                  %input#email{:name => "email", :placeholder => "address", :type => "text", :value => ""}/
+                  %input#subject{:name => "subject", :placeholder => "subject", :type => "text", :value => ""}/
+                  %textarea#message{:cols => "25", :name => "message", :placeholder => "message", :rows => "50"}
+                  %input#submit{:name => "submit", :type => "submit", :value => "Send!"}/
+            %h4.copyright
+    %a#back-to-top{:href => "#"}
+      %i.fa.fa-angle-up
+    %a#print{:href => "javascript:window.print()", :title => "Print the CV"}
+      %i.fa.fa-print
+    %a#pdf{:href => "#", :title => "Download it as a .pdf"}
+      %i.fa.fa-download
