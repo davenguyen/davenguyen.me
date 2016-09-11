@@ -21,21 +21,26 @@
     #wrap
       #header
         .row.cv-section
-          .span12
-            .cv-section-title.text-center
+          .span9
+            .cv-section-title
               %h1
                 Dave Nguyen
                 %small Ruby on Rails Developer
 
-              .social-media.text-center
+          .span3
+            .cv-item
+              .social-media
                 = mail_to 'dave@davenguyen.me' do
                   = fa_stacked_icon 'envelope inverse', base: 'square', class: 'fa-2x'
+                  dave@davenguyen.me
+                %br/
                 = link_to 'https://github.com/davenguyen?tab=repositories', target: '_blank' do
                   = fa_stacked_icon 'github inverse', base: 'square', class: 'fa-2x'
+                  github.com/davenguyen
+                %br/
                 = link_to 'https://www.linkedin.com/in/davehn', target: '_blank' do
                   = fa_stacked_icon 'linkedin inverse', base: 'square', class: 'fa-2x'
-                %span
-                  = fa_stacked_icon 'ra inverse', base: 'square', class: 'fa-2x'
+                  linkedin.com/in/davehn
       #content
         = yield
       #footer
