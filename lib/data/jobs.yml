@@ -1,0 +1,12 @@
+-
+  company_name: FundAmerica, LLC
+  company_website: http://www.fundamerica.com/
+  title: Senior Ruby Engineer
+  description: '<p>FundAmerica offers a comprehensive, yet easy to implement technology layer for crowdfunding compliance.<p> <ul class="fill-circle"> <li>Designed and implemented billing system, including highly-customized fee schedules, billing methods, subscriptions, monthly reports, and audit trail features.</li> <li>Built e-mail framework, allowing sending and tracking of e-mails with customized formats, variables, and attachments.</li> <li>Created ledgers to manage escrow and investor funds. Developed reconciliation feature to verify funds matched with bank accounts.</li> <li>Integrated third-party services, including Stripe and Plaid.</li> <li>Led a team of developers to deliver new features for API and front-end design.</li> </ul>'
+  start_date: '2013-11-01'
+-
+  company_name: Newport Beach Film Festival (Volunteer)
+  company_website: https://www.newportbeachfilmfest.com/
+  title: Web Developer
+  description: '<p>Celebrating its 18th year, the Newport Beach Film Festival (NBFF) annually showcases over 350 films from 50 countries and attracts over 50,000 attendees, making it one of Southern California’s longest running and largest film events.</p> <ul class="fill-circle"> <li>Replaced static website with WordPress.</li> <li>Helped develop internal CMS using FileMaker.</li> </ul>'
+  start_date: '2003-04-01'
