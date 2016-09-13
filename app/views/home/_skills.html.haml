@@ -1,77 +1,10 @@
 = cv_section 'Technical Skills' do
   .cv-item
-    .skill-group
-      %h3.text-uppercase
-        %strong Languages / Frameworks
-      %p.last
-        %ul
-          %li AngularJS
-          %li Java
-          %li JavaScript
-          %li PHP
-          %li Ruby / Ruby on Rails
-
-    .skill-group
-      %h3.text-uppercase
-        %strong Ruby on Rails
-      %p.last
-        %ul
-          %li Capybara
-          %li CarrierWave
-          %li Devise
-          %li FactoryGirl
-          %li RVM
-          %li Selenium
-          %li Sequel
-          %li Solidus
-
-    .skill-group
-      %h3.text-uppercase
-        %strong Web Technologies and Design
-      %p.last
-        %ul
-          %li RESTful API
-          %li JSON
-          %li AJAX
-          %li HTML
-          %li CSS
-          %li Sass
-          %li Bootstrap
-
-    .skill-group
-      %h3.text-uppercase
-        %strong Databases
-      %p.last
-        %ul
-          %li PostgreSQL
-          %li MySQL
-          %li SQLite3
-
-    .skill-group
-      %h3.text-uppercase
-        %strong Deployment
-      %p.last
-        %ul
-          %li AWS
-          %li EngineYard
-          %li Heroku
-
-    .skill-group
-      %h3.text-uppercase
-        %strong Software Development
-      %p.last
-        %ul
-          %li Agile
-          %li Git
-          %li JIRA
-          %li Pivotal Tracker
-          %li Technical Documentation
-
-    .skill-group
-      %h3.text-uppercase
-        %strong Operating Systems
-      %p.last
-        %ul
-          %li Linux
-          %li Mac OS X
-          %li Windows
+    - categories.each do |category|
+      .skill-group
+        %h3.text-uppercase
+          %strong= category.name
+        %p.last
+          %ul
+            - category.children.each do |skill|
+              %li= skill.name

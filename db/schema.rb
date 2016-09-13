@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160913024552) do
+ActiveRecord::Schema.define(version: 20160913042700) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "jobs", force: :cascade do |t|
     t.string   "company_name",    null: false
@@ -21,6 +24,16 @@ ActiveRecord::Schema.define(version: 20160913024552) do
     t.date     "end_date"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.string   "name",                   null: false
+    t.integer  "parent_id"
+    t.integer  "sequence",   default: 0, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["parent_id", "sequence"], name: "index_skills_on_parent_id_and_sequence", unique: true, using: :btree
+    t.index ["parent_id"], name: "index_skills_on_parent_id", using: :btree
   end
 
 end
