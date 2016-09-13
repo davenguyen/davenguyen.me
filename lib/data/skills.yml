@@ -1,0 +1,48 @@
+# Categories
+- name: Ruby on Rails-Related
+  skills:
+    - name: Capybara
+    - name: CarrierWave
+    - name: FactoryGirl
+    - name: minitest
+    - name: RVM
+    - name: Selenium
+    - name: Sequel
+    - name: Solidus
+- name: Languages / Frameworks
+  skills:
+    - name: Ruby / Ruby on Rails
+    - name: AngularJS
+    - name: JavaScript
+    - name: PHP
+- name: Web Technologies and Design
+  skills:
+    - name: RESTful API
+    - name: JSON
+    - name: AJAX
+    - name: HTML
+    - name: CSS
+    - name: Sass
+    - name: Bootstrap
+- name: Databases
+  skills:
+    - name: PostgreSQL
+    - name: MySQL
+    - name: SQLite3
+- name: Deployment
+  skills:
+    - name: AWS
+    - name: Heroku
+    - name: EngineYard
+- name: Software Development
+  skills:
+    - name: Git
+    - name: Agile
+    - name: JIRA
+    - name: Pivotal Tracker
+    - name: Technical Documentation
+- name: Operating Systems
+  skills:
+    - name: Linux
+    - name: Mac OS X
+    - name: Windows
