@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160913042700) do
+ActiveRecord::Schema.define(version: 20160914011752) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "job_skills", force: :cascade do |t|
+    t.integer  "job_id",                 null: false
+    t.integer  "skill_id",               null: false
+    t.integer  "sequence",   default: 0, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["job_id", "sequence"], name: "index_job_skills_on_job_id_and_sequence", unique: true, using: :btree
+    t.index ["job_id", "skill_id"], name: "index_job_skills_on_job_id_and_skill_id", unique: true, using: :btree
+    t.index ["job_id"], name: "index_job_skills_on_job_id", using: :btree
+    t.index ["skill_id"], name: "index_job_skills_on_skill_id", using: :btree
+  end
 
   create_table "jobs", force: :cascade do |t|
     t.string   "company_name",    null: false
@@ -37,4 +49,6 @@ ActiveRecord::Schema.define(version: 20160913042700) do
     t.index ["parent_id"], name: "index_skills_on_parent_id", using: :btree
   end
 
+  add_foreign_key "job_skills", "jobs"
+  add_foreign_key "job_skills", "skills"
 end

@@ -8,5 +8,6 @@
         job.company_name,
         job.company_website,
         target: '_blank'
-      %br/
-      = job.description.try(:html_safe)
+      .job-skills= job.highlighted_skills.map(&:name).join(', ')
+
+      %p= job.description.try(:html_safe)
