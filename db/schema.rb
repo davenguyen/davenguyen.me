@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20160913042700) do
     t.integer  "sequence",   default: 0, null: false
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.index ["name"], name: "index_skills_on_name", unique: true, using: :btree
     t.index ["parent_id", "sequence"], name: "index_skills_on_parent_id_and_sequence", unique: true, using: :btree
     t.index ["parent_id"], name: "index_skills_on_parent_id", using: :btree
   end
