@@ -1,4 +1,10 @@
-# Categories
+- name: Languages / Frameworks
+  skills:
+    - name: Ruby on Rails
+    - name: Ruby
+    - name: AngularJS
+    - name: WordPress
+    - name: PHP
 - name: Ruby on Rails-Related
   skills:
     - name: Capybara
@@ -9,26 +15,20 @@
     - name: Selenium
     - name: Sequel
     - name: Solidus
-- name: Languages / Frameworks
-  skills:
-    - name: Ruby / Ruby on Rails
-    - name: AngularJS
-    - name: JavaScript
-    - name: PHP
 - name: Web Technologies and Design
   skills:
     - name: RESTful API
+    - name: jQuery
     - name: JSON
     - name: AJAX
-    - name: HTML
-    - name: CSS
     - name: Sass
     - name: Bootstrap
+    - name: CSS
+    - name: HTML
 - name: Databases
   skills:
     - name: PostgreSQL
     - name: MySQL
-    - name: SQLite3
 - name: Deployment
   skills:
     - name: AWS
