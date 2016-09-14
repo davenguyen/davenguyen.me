@@ -7,4 +7,14 @@
         %p.last
           %ul
             - category.children.each do |skill|
-              %li= skill.name
+              .skill
+                %li= skill.name
+
+                .skill-detail
+                  %strong= skill.name
+                  - if skill.jobs.any?
+                    %br/
+                    Skill applied at:
+                    %ul
+                      - skill.jobs.each do |job|
+                        %li= job.company_name
