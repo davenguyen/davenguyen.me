@@ -35,7 +35,7 @@
   title: Web Developer
   description: '<p>Celebrating its 18th year, the Newport Beach Film Festival (NBFF) annually showcases over 350 films from 50 countries and attracts over 50,000 attendees, making it one of Southern California’s longest running and largest film events.</p> <ul class="fill-circle"> <li>Replaced static website with WordPress.</li> <li>Helped develop internal CMS using FileMaker.</li> </ul>'
   start_date: '2003-04-01'
-  end_date: '2014-05-01'
+  end_date: '2013-05-01'
   skills:
     - WordPress
     - PHP
