@@ -10,7 +10,9 @@
     - name: Capybara
     - name: CarrierWave
     - name: FactoryGirl
+    - name: Haml
     - name: minitest
+    - name: Rails Engine
     - name: RVM
     - name: Selenium
     - name: Sequel

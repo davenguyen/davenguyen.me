@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160914011752) do
+ActiveRecord::Schema.define(version: 20160917025457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,27 @@ ActiveRecord::Schema.define(version: 20160914011752) do
     t.datetime "updated_at",      null: false
   end
 
+  create_table "project_skills", force: :cascade do |t|
+    t.integer  "project_id",             null: false
+    t.integer  "skill_id",               null: false
+    t.integer  "sequence",   default: 0, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["project_id", "sequence"], name: "index_project_skills_on_project_id_and_sequence", unique: true, using: :btree
+    t.index ["project_id", "skill_id"], name: "index_project_skills_on_project_id_and_skill_id", unique: true, using: :btree
+    t.index ["project_id"], name: "index_project_skills_on_project_id", using: :btree
+    t.index ["skill_id"], name: "index_project_skills_on_skill_id", using: :btree
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "name",         null: false
+    t.string   "website"
+    t.text     "description"
+    t.integer  "project_year", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "skills", force: :cascade do |t|
     t.string   "name",                   null: false
     t.integer  "parent_id"
@@ -51,4 +72,6 @@ ActiveRecord::Schema.define(version: 20160914011752) do
 
   add_foreign_key "job_skills", "jobs"
   add_foreign_key "job_skills", "skills"
+  add_foreign_key "project_skills", "projects"
+  add_foreign_key "project_skills", "skills"
 end

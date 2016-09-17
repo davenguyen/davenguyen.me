@@ -1,0 +1,28 @@
+- name: Old Newport Antiques
+  description: '<p>Old Newport Antiques started almost 45 years ago and now looking for a web precense.</p>'
+  project_year: 2016
+  skills:
+    - Ruby on Rails
+    - Solidus
+    - Bootstrap
+    - Sass
+    - Git
+- name: IndieBeach
+  description: '<p>We started this company with a singular purpose—to tell great stories. Over the last twelve years, that’s exactly what we’ve done. And we can’t wait to tell yours.</p>'
+  project_year: 2016
+  website: 'http://www.indiebeach.com/'
+  skills:
+    - Ruby on Rails
+    - Heroku
+    - Haml
+    - Git
+- name: LunarShell
+  description: "<p>A command-line interface for today's web.</p>"
+  project_year: 2016
+  website: 'https://github.com/davenguyen/lunar_shell'
+  skills:
+    - Ruby on Rails
+    - Rails Engine
+    - Heroku
+    - Haml
+    - Git

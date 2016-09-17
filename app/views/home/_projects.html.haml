@@ -1,5 +1,12 @@
 = cv_section 'Projects' do
-  .cv-item
-    %h3
-      %strong Web Developer
-    %h4= link_to 'Old Newport Antiques', 'http://oldnewportantiques.com/', target: '_blank'
+  - projects.each do |project|
+    .cv-item
+      %p.period= project.project_year
+      %h4
+        %strong= link_to_if project.website.present?,
+          project.name,
+          project.website,
+          target: '_blank'
+      .job-skills= project.highlighted_skills.map(&:name).join(', ')
+
+      %p= project.description.try(:html_safe)
